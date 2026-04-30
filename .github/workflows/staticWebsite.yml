@@ -1,4 +1,4 @@
-name: static-website-hosting
+name: static-website
 on:
   push:
     branches:
@@ -11,9 +11,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout code from repo
-        uses: actions/checkout@v4
-      - name: configure aws credentials
+      - name: configuraing aws credentials
         uses: aws-actions/configure-aws-credentials@v6.1.0
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
@@ -22,7 +20,5 @@ jobs:
       - name: deploying static website on s3
         run: |
           aws s3 sync ./ s3://githubaction-static-website/ \
-          --exclude "*" \
+          --exclude "*"
           --include "index.html"
-  
-
