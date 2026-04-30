@@ -22,7 +22,7 @@ jobs:
       - name: deploying static website on s3
         run: |
           aws s3 sync ./ s3://githubaction-static-website/ \
-          -- exclude "*" \
-          -- include "index.html"
+          --exclude "*" \
+          --include "index.html"
   
 
