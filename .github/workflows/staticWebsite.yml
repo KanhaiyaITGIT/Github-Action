@@ -1,9 +1,9 @@
-name: input concepts
+name: input type usage
 on:
   workflow_dispatch:
     inputs:
       environment:
-        description: input environment to choose to deploy
+        description: choose the environment to deploy
         required: true
         default: dev
         type: choice
@@ -12,13 +12,13 @@ on:
           - prod
           - QA
       artifacts_tags:
-        description: choose the git tag to deploy
+        description: choose tag to deploy
         required: true
-      
-      
+
 jobs:
   input:
     runs-on: ubuntu-latest
     steps:
-      - name: deploy the app
-        run: echo "Deploying the ${{ inputs.artifacts_tags }} application ${{ inputs.environment }}"
+      - name: Deploying application wiht the help of input type
+        run: echo "deploying tag ${{ inputs.artifacts_tags }} to ${{ inputs.artifacts_tags }} Environment."
+        
