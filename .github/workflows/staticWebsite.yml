@@ -1,13 +1,5 @@
 name: context demo
-on:
-  push:
-    branches:
-      - main
-      - qa
-
-  pull_request:
-    branches:
-      - main
+on: workflow_dispatch
 
 jobs:
   context-demo:
