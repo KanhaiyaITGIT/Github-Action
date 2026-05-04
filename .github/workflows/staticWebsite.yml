@@ -17,6 +17,8 @@ jobs:
         run: |
           echo "this workflow is trigger by ${{ github.actor }}"
           echo "this repository name is ${{ github.repository }}"
+          echo "The branch you picked ${{ github.ref_name }}"
+          echo "the workflow type ${{ github.workflow}}"
 
       - name: showing all github variables
         run: echo "${{ toJson(github) }}"
