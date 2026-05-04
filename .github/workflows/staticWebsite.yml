@@ -25,3 +25,6 @@ jobs:
 
       - name: print all environment
         run: printenv
+
+      - name: printing last commit id
+        run: echo "${{ github.sha }}"
