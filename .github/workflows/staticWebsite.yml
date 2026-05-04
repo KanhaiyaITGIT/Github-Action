@@ -1,24 +1,20 @@
-name: input type usage
+name: context demo
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: choose the environment to deploy
-        required: true
-        default: dev
-        type: choice
-        options:
-          - dev
-          - prod
-          - QA
-      artifacts_tags:
-        description: choose tag to deploy
-        required: true
+  push:
+    branches:
+      - main
+      - qa
+
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  input:
+  context-demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploying application wiht the help of input type
-        run: echo "deploying tag ${{ inputs.artifacts_tags }} to ${{ inputs.artifacts_tags }} Environment."
-        
+      - name: context demo setup
+        run: |
+          echo "this workflow is trigger by ${{ github.actor }}"
+          echo "this repository name is ${{ github.repository }}
+          
