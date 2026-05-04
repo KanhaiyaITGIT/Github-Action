@@ -1,5 +1,5 @@
 name: if condition
-on: push
+on: workflow_dispatch
 
 jobs:
   condition:
