@@ -30,4 +30,4 @@ jobs:
         run: echo "${{ github.sha }}"
 
       - name: printing github ref
-        run: echo "${{ github.ref }}"
+        run: echo "${{ github.ref_name }}"
