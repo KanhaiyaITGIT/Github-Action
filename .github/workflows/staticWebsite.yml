@@ -28,3 +28,6 @@ jobs:
 
       - name: printing last commit id
         run: echo "${{ github.sha }}"
+
+      - name: printing github ref
+        run: echo "${{ github.ref }}"
