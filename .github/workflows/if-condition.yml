@@ -20,5 +20,7 @@ jobs:
         run: echo "code is being deployed on main branch"
       - name: run this step
         run: echo "the pipeline is running"
+      - name: run this steps
+        run: echo "${{ github.ref_name }}"
        
     
