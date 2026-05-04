@@ -16,5 +16,5 @@ jobs:
       - name: context demo setup
         run: |
           echo "this workflow is trigger by ${{ github.actor }}"
-          echo "this repository name is ${{ github.repository }}
+          echo "this repository name is ${{ github.repository }}"
           
