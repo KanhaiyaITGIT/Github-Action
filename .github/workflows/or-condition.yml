@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: this pipeline can be trigger by following people
-        if: github.actor == 'kanhaiya' || github.actor == 'KanhaiyaITGIT'
+        if: github.actor == 'kanhaiya' || github.actor == 'KanhaiyaITGITT'
         run: echo "this pipeline can be triggered by either kanhaiya or kanhaiya IT"
   
