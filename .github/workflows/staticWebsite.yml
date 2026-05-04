@@ -13,6 +13,7 @@ jobs:
           echo "the workflow type ${{ github.workflow}}"
 
       - name: showing all github variables
+        if: github.event_name == 'pull_request'
         run: echo "${{ toJson(github) }}"
 
       - name: print all environment
