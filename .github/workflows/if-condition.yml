@@ -1,15 +1,5 @@
 name: if condition
-on:
-  push:
-    branches:
-      - qa
-      - prod
-      - dev
-  pull_request:
-    branches:
-      - qa
-      - dev
-      - prod
+on: push
 
 jobs:
   condition:
