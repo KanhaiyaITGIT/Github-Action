@@ -1,5 +1,5 @@
 name: or-condition
-on: push
+on: workflow_dispatch
 
 jobs:
   or-condiiton:
