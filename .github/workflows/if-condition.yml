@@ -11,6 +11,11 @@ jobs:
       - name: run this step
         run: echo "the pipeline is running"
       - name: run this steps
-        run: echo "${{ github.ref_name }}"
+        run: |
+          echo "${{ github.ref_name }}"
+          echo "${{ github.sha }}" 
+          echo "${{ github.run_number }}"
+          echo "${{ github.run_id }}"
+          echo "printenv"  
        
     
