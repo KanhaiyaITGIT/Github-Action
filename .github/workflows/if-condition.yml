@@ -16,6 +16,6 @@ jobs:
           echo "${{ github.sha }}" 
           echo "${{ github.run_number }}"
           echo "${{ github.run_id }}"
-          echo "printenv"  
+          echo "$printenv"  
        
     
